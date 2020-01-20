@@ -1,0 +1,21 @@
+% im = imread('mri_txt.tif');
+% figure(1);
+% imshow(im);
+% 
+% J = imadjust(im,stretchlim(im),[]);
+% figure(2);
+% imshow(J);
+
+
+im2 = imread('monet_gray_xlc.jpg');
+figure(3);
+imshow(im2);
+
+L = adapthisteq(im2,'ClipLimit',0.2);
+% figure(5);
+% imshow(L);
+
+K = histeq(L);
+figure(6);
+imshow(K);
+

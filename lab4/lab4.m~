@@ -1,0 +1,19 @@
+im = imread('honeypot.jpg');
+figure(1);
+imshow(im);
+
+l = fspecial('average', );
+z = imfilter(im,l);
+figure(4);
+imshow(z);
+
+h = fspecial('sobel');
+i = h';
+j = h + i;
+b = imfilter(im, j);
+figure(2);
+imshow(b);
+
+x = z - b;
+figure(3);
+imshow(x);
